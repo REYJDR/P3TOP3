@@ -14,6 +14,13 @@ SET time_zone = "+00:00";
 -- Database: 'daoutqw3_sage_ga'
 --
 
+CREATE TABLE IF NOT EXISTS `CompanySession` (
+  `ID_compania` bigint(20) NOT NULL,
+  `CompanyNameSage50` varchar(50) NOT NULL,
+  `isConnected` tinyint(1) NOT NULL,
+  `LAST_CHANGE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID_compania`,`CompanyNameSage50`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 -- --------------------------------------------------------
 
 --
